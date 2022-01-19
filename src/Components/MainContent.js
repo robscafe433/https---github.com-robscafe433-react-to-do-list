@@ -1,17 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import ToDoItem from "./ToDoItem";
 
 const MainContent = () => {
     return (
         <div>
-            <input type="checkbox" />
-            <p>Placeholder text here</p>
-            <input type="checkbox" />
-            <p>Placeholder text here</p>
-            <input type="checkbox" />
-            <p>Placeholder text here</p>
-            <input type="checkbox" />
-            <p>Placeholder text here</p>
+            <ToDoItem />
+            <ToDoItem />
+            <ToDoItem />
+            <ToDoItem />
         </div>
     );
 };
