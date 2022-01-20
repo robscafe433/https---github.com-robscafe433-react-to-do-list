@@ -2,40 +2,21 @@ import React from "react";
 import ContactCard from "./Components/ContactCard";
 import Header from "./Components/Header";
 import MainComponent from "./Components/MainContent";
+import Joke from "./Components/Joke";
+import jokesData from "./jokesData";
 
 import "./style.css";
 
-const App = () => {
-    return (
-        <div>
-            <Header />
-            <MainComponent />
-            <ContactCard
-                name="Mr. Whiskers"
-                imgUrl="http://placekitten.com/300/200"
-                phone="999-999-9999"
-                email="Mr.whiskers@catnap.meow"
-            />
-            <ContactCard
-                name="Mr. Felix"
-                imgUrl="http://placekitten.com/300/300"
-                phone="999-999-9999"
-                email="Mr.whiskers@catnap.meow"
-            />
-            <ContactCard
-                name="Mr. Garfield"
-                imgUrl="http://placekitten.com/300/400"
-                phone="999-999-9999"
-                email="Mr.whiskers@catnap.meow"
-            />
-            <ContactCard
-                name="Mr. Destroyer"
-                imgUrl="http://placekitten.com/300/600"
-                phone="999-999-9999"
-                email="Mr.whiskers@catnap.meow"
-            />
-        </div>
-    );
-};
+function App() {
+    const jokeComponents = jokesData.map((joke) => (
+        <Joke
+            key={joke.id}
+            question={joke.question}
+            punchLine={joke.punchLine}
+        />
+    ));
+
+    return <div>{jokeComponents}</div>;
+}
 
 export default App;

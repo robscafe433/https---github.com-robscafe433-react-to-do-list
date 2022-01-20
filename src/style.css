@@ -27,3 +27,8 @@ body {
     font-size: 15px;
     color: #333333;
 }
+
+.Question {
+    font-style: italic;
+    color: blue;
+}
