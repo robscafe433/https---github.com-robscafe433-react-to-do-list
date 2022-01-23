@@ -1,13 +1,17 @@
 import React from "react";
+import jokesData from "../jokesData";
 
 const Joke = (props) => {
-    return (
-        <div>
-            <h1>Question: {props.question}</h1>
-            <h1>Punchline: {props.punchLine}</h1>
-            <br /><br /><br />
-        </div>
-    );
+    const jokesComponent2 = jokesData.map((joke) => {
+        return (
+            <div>
+                {joke.question}
+                <h2>The answer is: {props.answer}</h2>
+            </div>
+        );
+    });
+
+    return <div>{jokesComponent2}</div>;
 };
 
 export default Joke;

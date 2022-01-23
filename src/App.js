@@ -1,22 +1,13 @@
 import React from "react";
-import ContactCard from "./Components/ContactCard";
-import Header from "./Components/Header";
-import MainComponent from "./Components/MainContent";
-import Joke from "./Components/Joke";
-import jokesData from "./jokesData";
+import productsData from "./schoolProductsData";
+import Product from "./Components/Products";
 
-import "./style.css";
+const App = () => {
+    const productsComponent = productsData.map((item) => {
+        return <Product key={item.id} product={item} />;
+    });
 
-function App() {
-    const jokeComponents = jokesData.map((joke) => (
-        <Joke
-            key={joke.id}
-            question={joke.question}
-            punchLine={joke.punchLine}
-        />
-    ));
-
-    return <div>{jokeComponents}</div>;
-}
+    return <div>{productsComponent}</div>;
+};
 
 export default App;

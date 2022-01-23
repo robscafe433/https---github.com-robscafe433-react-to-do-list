@@ -1,7 +1,7 @@
 const jokesData = [
     {
         id: 1,
-        question: "Whi did the chicken cross the road?",
+        question: "Why did the chicken cross the road?",
         punchLine: "to get to the other side",
     },
     {
