@@ -1,13 +1,14 @@
 import React from "react";
-import productsData from "./schoolProductsData";
-import Product from "./Components/Products";
+import Joke from "./Components/Joke";
+import Products from "./Components/Products";
+import jokesData from "./jokesData";
+import schoolsProduct from "./schoolProductsData";
 
 const App = () => {
-    const productsComponent = productsData.map((item) => {
-        return <Product key={item.id} product={item} />;
+    const schoolDataDisplay = schoolsProduct.map((item) => {
+        return <Products generalInfo={item} />;
     });
-
-    return <div>{productsComponent}</div>;
+    return <div>{schoolDataDisplay}</div>;
 };
 
 export default App;
