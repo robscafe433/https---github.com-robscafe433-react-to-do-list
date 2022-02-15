@@ -1,14 +1,28 @@
-import React from "react";
+import React, { Component } from "react";
 
-class App extends React.Component {
+class App extends Component {
   constructor() {
     super();
     this.state = {
-      answer: "Yes",
+      isLoggedIn: true,
     };
   }
+
   render() {
-    return <h1>is state important? {this.state.answer}</h1>;
+    let logInStatus;
+    if (this.state.isLoggedIn) {
+      logInStatus = "in";
+    } else {
+      logInStatus = "out";
+    }
+
+    console.log(logInStatus);
+
+    return (
+      <div>
+        <h1>User is logged {logInStatus}</h1>
+      </div>
+    );
   }
 }
 
