@@ -1,11 +1,12 @@
 import React from "react";
 
 const Joke = (props) => {
-    return (
-        <div>
-            <h2>Question is: {props.question}</h2>
-            <h2>Answer is: {props.answer}</h2>
-        </div>
-    );
+  return (
+    <div>
+      <h1>{props.question}</h1>
+      <h1>{props.punchLine}</h1>
+    </div>
+  );
 };
+
 export default Joke;

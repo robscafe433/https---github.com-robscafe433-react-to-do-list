@@ -1,13 +1,20 @@
-import React from "react";
-import TodoItem from "./Components/TodoItem";
-import todoData from "./todoData";
+import { useState } from "react";
 
 const App = () => {
-  const todoItems = todoData.map((item) => {
-    return <TodoItem key={item.id} item={item} />;
-  });
+  // let name = "mario";
+  const [name, setName] = useState("mario");
 
-  return <div>{todoItems}</div>;
+  const handleClick = () => {
+    setName("luigi");
+    console.log(name);
+  };
+
+  return (
+    <div>
+      <p>{name}</p>
+      <button onClick={handleClick}>Click me</button>
+    </div>
+  );
 };
 
 export default App;
